@@ -34,7 +34,7 @@ Confira algumas imagens do programa em execução no terminal clicando [aqui](ht
 
 - Clone este repositorio
 
-​       `$ git clone link`.
+​       `$ git clone https://github.com/GabrielQuaglio/Projeto_jogo_da_velha.git`.
 
 - Navegue até o diretorio principal do projeto
 
