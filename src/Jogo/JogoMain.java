@@ -24,12 +24,12 @@ import java.util.Scanner;
 
             menu.menu();//metodo menu com as opçoes do menu a serem exibidas ao usuario
 
-            if (menu.opçao == 3) {// caso o usuario no menu escolha a opçao 3, ele saira do jogo
+            if (menu.getOpçao() == 3) {// caso o usuario no menu escolha a opçao 3, ele saira do jogo
                 System.out.println(
                         "Foi uma honra ter -lo conosco, mas pô quando\n" + "tiver tempo bora dar uma jogadinha :)");
             }
 
-            if (menu.opçao == 1) {//caso o usuario no menu escolha a opçao 1 ele, quer jogar
+            if (menu.getOpçao() == 1) {//caso o usuario no menu escolha a opçao 1 ele, quer jogar
 
                 System.out.print("Insira o seu nome player 1: ");
                 jogador1.setNome(entrada.next());//nome do player 1

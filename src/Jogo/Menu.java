@@ -12,9 +12,21 @@ import java.io.InputStreamReader;
 public class Menu {
 
         String resposta = "nao";
-        public int opçao;
+        private int opçao;
 
-        BufferedReader enter = new BufferedReader(new InputStreamReader(System.in));
+    public int getOpçao() {
+        return opçao;
+    }
+
+    public void setOpçao(int opçao) {
+        if (opçao > 0 && opçao < 4) {
+            this.opçao = opçao;
+        } else {
+            System.out.println("Numero de opção nao existente, selecione outra opção");
+        }
+    }
+
+    BufferedReader enter = new BufferedReader(new InputStreamReader(System.in));
 
         void menu() throws IOException {//metodo que oferece um menu ao usuario
 
@@ -26,7 +38,7 @@ public class Menu {
                 System.out.println("3. Sair");
                 System.out.print("Informe o número da opçao que você quer executar: ");
                 String s = enter.readLine();
-                opçao = Integer.parseInt(s);
+                setOpçao(Integer.parseInt(s));
 
 
                 if (opçao == 2) { // se o usuario selecionar a opçao de numero 2, ele é levado as instruçoes
