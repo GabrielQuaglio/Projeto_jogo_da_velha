@@ -42,10 +42,6 @@ Confira algumas imagens do programa em execução no terminal clicando [aqui](ht
 ​       `$ cd Diretorio_A_Sua_Escolha/ProjetoJogoDaVelha/src/Jogo`.
 
 
-​       `$ git clone https://github.com/GabrielQuaglio/Projeto_jogo_da_velha.git`.
-
-
-
 - Navegue até o diretorio principal do projeto
 
 ​       `$ cd /ProjetoJogoDaVelha/src/Jogo`.
