@@ -34,23 +34,23 @@ Confira algumas imagens do programa em execução no terminal clicando [aqui](ht
 
 - Clone este repositorio
 
-<<<<<<< HEAD
+
 ​       `$ git clone https://github.com/GabrielQuaglio/Projeto_jogo_da_velha.git `.
 
 - Navegue até o diretorio principal do projeto
 
 ​       `$ cd Diretorio_A_Sua_Escolha/ProjetoJogoDaVelha/src/Jogo`.
-=======
-<<<<<<<< HEAD:README.md
+
+
 ​       `$ git clone https://github.com/GabrielQuaglio/Projeto_jogo_da_velha.git`.
-========
+
 ​       `$ git clone https://github.com/GabrielQuaglio/Projeto_jogo_da_velha.git `.
->>>>>>>> 84a8e9d83cabf353551f2a2958aff7e84fadefff:Readme.md
+
 
 - Navegue até o diretorio principal do projeto
 
 ​       `$ cd /ProjetoJogoDaVelha/src/Jogo`.
->>>>>>> 84a8e9d83cabf353551f2a2958aff7e84fadefff
+
 
 - Dentro do pacote Jogo compile as classes do projeto
 
