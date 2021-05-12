@@ -34,13 +34,13 @@ import java.io.InputStreamReader;
 
         public void jogar(Jogador object) throws IOException {//metodo para o objeto jogador realizar sua jogadas
 
-            System.out.print(object.nome + ", qual a posiçao que você gostaria do jogar?");
+            System.out.print(object.getNome() + ", qual a posiçao que você gostaria do jogar?");
             String jogadaTexto = enter.readLine();
             int jogada = Integer.parseInt(jogadaTexto);
 
             if (jogada == 1 && tabuleiro[2][0] == 0) {//se a jogada tiver valor 1 e a posiçao de linha 2 e coluna 0 estiver vazia, ele faz a jogada
 
-                tabuleiro[2][0] = object.simbolo;//põe o simbolo do objeto jogador na posiçao de linha 2 e coluna 0 - posiçao 1
+                tabuleiro[2][0] = object.getSimbolo();//põe o simbolo do objeto jogador na posiçao de linha 2 e coluna 0 - posiçao 1
 
 
             } else if (jogada == 1 && (tabuleiro[2][0] == 'x' || tabuleiro[2][0] == 'o')) {//se a posiçao de linha 2 e coluna 0 estiver ocupada
@@ -54,7 +54,7 @@ import java.io.InputStreamReader;
                 //e a posiçao de linha 2 e coluna 1 estiver vazia, ele faz a jogada
 
 
-                tabuleiro[2][1] = object.simbolo;//põe o simbolo do objeto jogador na posiçao de linha 2 e coluna 1 - posiçao 2
+                tabuleiro[2][1] = object.getSimbolo();//põe o simbolo do objeto jogador na posiçao de linha 2 e coluna 1 - posiçao 2
 
             } else if ((jogada == 2 || jogada2 == 2) && (tabuleiro[2][1] == 'x' || tabuleiro[2][1] == 'o')) {//se a posiçao de linha 2 e coluna 1 estiver ocupada
                 System.out.println("Jogada invalida, a posiçao já esta ocupada");                           // ele alertara o erro e pedirá uma nova posiçao ao
@@ -67,7 +67,7 @@ import java.io.InputStreamReader;
             if ((jogada == 3 || jogada3 == 3) && tabuleiro[2][2] == 0) {//se a jogada tiver valor 3 ou a nova posiçao(jogada3) for 3
                 //e a posiçao de linha 2 e coluna 2 estiver vazia, ele faz a jogada
 
-                tabuleiro[2][2] = object.simbolo;//põe o simbolo do objeto jogador na posiçao de linha 2 e coluna 2 - posiçao 3
+                tabuleiro[2][2] = object.getSimbolo();//põe o simbolo do objeto jogador na posiçao de linha 2 e coluna 2 - posiçao 3
 
             } else if ((jogada == 3 || jogada3 == 3) && (tabuleiro[2][2] == 'x' || tabuleiro[2][2] == 'o')) {//se a posiçao de linha 2 e coluna 2 estiver ocupada
                 System.out.println("Jogada invalida, a posiçao já esta ocupada");                            // ele alertara o erro e pedirá uma nova posiçao ao
@@ -81,7 +81,7 @@ import java.io.InputStreamReader;
                 //e a posiçao de linha 1 e coluna 0 estiver vazia, ele faz a jogada
 
 
-                tabuleiro[1][0] = object.simbolo;//põe o simbolo do objeto jogador na posiçao de linha 1 e coluna 0 - posiçao 4
+                tabuleiro[1][0] = object.getSimbolo();//põe o simbolo do objeto jogador na posiçao de linha 1 e coluna 0 - posiçao 4
 
             } else if ((jogada == 4 || jogada4 == 4) && (tabuleiro[1][0] == 'x' || tabuleiro[1][0] == 'o')) {//se a posiçao de linha 1 e coluna 0 estiver ocupada
 // ele alertara o erro e pedirá uma nova posiçao ao
@@ -96,7 +96,7 @@ import java.io.InputStreamReader;
                 //e a posiçao de linha 1 e coluna 1 estiver vazia, ele faz a jogada
 
 
-                tabuleiro[1][1] = object.simbolo;//põe o simbolo do objeto jogador na posiçao de linha 1 e coluna 1 - posiçao 5
+                tabuleiro[1][1] = object.getSimbolo();//põe o simbolo do objeto jogador na posiçao de linha 1 e coluna 1 - posiçao 5
 
             } else if ((jogada == 5 || jogada5 == 5) && (tabuleiro[1][1] == 'x' || tabuleiro[1][1] == 'o')) {//se a posiçao de linha 1 e coluna 1 estiver ocupada
 // ele alertara o erro e pedirá uma nova posiçao ao
@@ -111,7 +111,7 @@ import java.io.InputStreamReader;
                 //e a posiçao de linha 1 e coluna 2 estiver vazia, ele faz a jogada
 
 
-                tabuleiro[1][2] = object.simbolo;//põe o simbolo do objeto jogador na posiçao de linha 1 e coluna 2 - posiçao 6
+                tabuleiro[1][2] = object.getSimbolo();//põe o simbolo do objeto jogador na posiçao de linha 1 e coluna 2 - posiçao 6
 
             } else if ((jogada == 6 || jogada6 == 6) && (tabuleiro[1][2] == 'x' || tabuleiro[1][2] == 'o')) {//se a posiçao de linha 1 e coluna 2 estiver ocupada
 // ele alertara o erro e pedirá uma nova posiçao ao
@@ -126,7 +126,7 @@ import java.io.InputStreamReader;
                 //e a posiçao de linha 0 e coluna o estiver vazia, ele faz a jogada
 
 
-                tabuleiro[0][0] = object.simbolo;//põe o simbolo do objeto jogador na posiçao de linha 0 e coluna 0 - posiçao 7
+                tabuleiro[0][0] = object.getSimbolo();//põe o simbolo do objeto jogador na posiçao de linha 0 e coluna 0 - posiçao 7
 
             } else if ((jogada == 7 || jogada7 == 7) && (tabuleiro[0][0] == 'x' || tabuleiro[0][0] == 'o')) {//se a posiçao de linha 0 e coluna 0 estiver ocupada
 // ele alertara o erro e pedirá uma nova posiçao ao
@@ -141,7 +141,7 @@ import java.io.InputStreamReader;
                 //e a posiçao de linha 0 e coluna 1 estiver vazia, ele faz a jogada
 
 
-                tabuleiro[0][1] = object.simbolo;//põe o simbolo do objeto jogador na posiçao de linha 0 e coluna 1 - posiçao 8
+                tabuleiro[0][1] = object.getSimbolo();//põe o simbolo do objeto jogador na posiçao de linha 0 e coluna 1 - posiçao 8
 
             } else if ((jogada == 8 || jogada8 == 8) && (tabuleiro[0][1] == 'x' || tabuleiro[0][1] == 'o')) {//se a posiçao de linha 0 e coluna 1 estiver ocupada
 // ele alertara o erro e pedirá uma nova posiçao ao
@@ -156,7 +156,7 @@ import java.io.InputStreamReader;
                 //e a posiçao de linha 0 e coluna 2 estiver vazia, ele faz a jogada
 
 
-                tabuleiro[0][2] = object.simbolo;//põe o simbolo do objeto jogador na posiçao de linha 0 e coluna 2 - posiçao 9
+                tabuleiro[0][2] = object.getSimbolo();//põe o simbolo do objeto jogador na posiçao de linha 0 e coluna 2 - posiçao 9
 
             } else if ((jogada == 9 || jogada9 == 9) && (tabuleiro[0][2] == 'x' || tabuleiro[0][2] == 'o')) {//se a posiçao de linha 0 e coluna 2 estiver ocupada
 // ele alertara o erro e pedirá uma nova posiçao ao
@@ -176,7 +176,7 @@ import java.io.InputStreamReader;
                         (tabuleiro[i][0] == tabuleiro[i][2])) {
                     if (tabuleiro[i][0] != 0) {
                         venceu = true;//usada para parar a execuçao do while no jogo main
-                        System.out.println("Parabéns!!! "+ object.nome + " você venceu!!");
+                        System.out.println("Parabéns!!! "+ object.getNome() + " você venceu!!");
                     }
                 }
             }
@@ -187,7 +187,7 @@ import java.io.InputStreamReader;
                     if(tabuleiro[0][j] != 0) {
 
                         venceu = true;//usada para parar a execuçao do while no jogo main
-                        System.out.println("Parabéns!!! "+ object.nome + " você venceu!!");
+                        System.out.println("Parabéns!!! "+ object.getNome() + " você venceu!!");
                     }
                 }
             }
@@ -196,7 +196,7 @@ import java.io.InputStreamReader;
                     (tabuleiro[0][0] != 0)) {
                 if(tabuleiro[0][0] != 0) {
                     venceu = true;//usada para parar a execuçao do while no jogo main
-                    System.out.println("Parabéns!!! "+ object.nome + " você venceu!!");
+                    System.out.println("Parabéns!!! "+ object.getNome() + " você venceu!!");
                 }
             }
 
@@ -207,7 +207,7 @@ import java.io.InputStreamReader;
                     (tabuleiro[0][2] != 0)) {
                 if(tabuleiro[0][2] != 0) {
                     venceu = true;//usada para parar a execuçao do while no jogo main
-                    System.out.println("Parabéns!!! "+ object.nome + " você venceu!!");
+                    System.out.println("Parabéns!!! "+ object.getNome() + " você venceu!!");
                 }
 
 

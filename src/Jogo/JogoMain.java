@@ -34,21 +34,20 @@ import java.util.Scanner;
                 System.out.print("Insira o seu nome player 1: ");
                 jogador1.setNome(entrada.next());//nome do player 1
 
-                System.out.print("Insira o simbolo que você quer jogar,\n bolinha(o) ou xis(x): ");
-                String simboloString = entrada.next();//simbolo que o jogador 1 escolhera utilizar
-
-                jogador1.setSimbolo(simboloString.charAt(0));
-
+                    while (jogador1.getFoi() == false) {
+                        System.out.print("Insira o simbolo que você quer jogar,\n bolinha(o) ou xis(x): ");
+                        jogador1.setSimbolo(entrada.next().charAt(0));    //simbolo que o jogador 1 escolhera utilizar
+                    }
                 System.out.print("Insira o seu nome player 2: ");
                 jogador2.setNome(entrada.next());//nome do player 2
 
-                if (jogador1.simbolo == 'x') {//caso o jogador 1 escolha o simbolo x para jogar, automaticamente o jogador 2 ira com a bolinha
+                if (jogador1.getSimbolo()== 'x') {//caso o jogador 1 escolha o simbolo x para jogar, automaticamente o jogador 2 ira com a bolinha
 
-                    System.out.print("O seu simbolo, " + jogador2.nome + " é a bolinha(o)\n");
+                    System.out.print("O seu simbolo, " + jogador2.getNome() + ", é a bolinha(o)\n");
                     jogador2.setSimbolo('o');
                     ;
                 } else {//caso o jogador 1 escolha a bolinha o player 2 hogara com o x
-                    System.out.println("O seu simbolo, " + jogador2.nome + " é o xis(x)\n");
+                    System.out.println("O seu simbolo, " + jogador2.getNome() + " é o xis(x)\n");
                     jogador2.setSimbolo('x');
                     ;
                 }
@@ -56,20 +55,20 @@ import java.util.Scanner;
                         + "aqui neste jogo somos contra espertinhos!\n"
                         + "Então sortearemos um número de 0 a 100, e vocês escolheram entre duas opções\n"
                         + "1-> 0 a 49 ou 2-> 50 a 100, quem acertar em qual escopo o número foi sorteado começa. \n"
-                        + "E então " + jogador1.nome + ", opção 1 ou 2?");
+                        + "E então " + jogador1.getNome() + ", opção 1 ou 2?");
                 jogador1.setSorte(entrada.nextInt());//escopo que o jogador 1 escolhera pra ter a chance de começar
 
-                if (jogador1.sorte == 1) {// Aqui o jogador 1 escolhe o escopo de 0 a 49
+                if (jogador1.getSorte() == 1) {// Aqui o jogador 1 escolhe o escopo de 0 a 49
                     System.out.println("opçao 1");
-                    System.out.println(jogador2.nome + ", você pode ter achado injusto ele começar escolhendo,"
+                    System.out.println(jogador2.getNome() + ", você pode ter achado injusto ele começar escolhendo,"
                             + " mas foi mal, player1 tem que ter um pouco de vantagem, não faço magica :)\n"
                             + "Sua opção é a de número 1, boa sorte! ");
 
                     if (numeroSorteado <= 49) {//Aqui o jogador 1 começa, pois o numero sorteado estava entre 0 a 49, e esse foi o
 // escopo escolhido pelo jogador 1
-                        System.out.println("O número foi sorteado e o vencedor é o ... " + jogador1.nome + "!!!\n"
+                        System.out.println("O número foi sorteado e o vencedor é o ... " + jogador1.getNome() + "!!!\n"
                                 + "É as vezes ser o privelegiado ajuda mesmo... Mas sem choro!!!\n"
-                                + "A dificuldade é a diversão dos fortes\n" + "Bom, vamos jogar e você " + jogador1.nome
+                                + "A dificuldade é a diversão dos fortes\n" + "Bom, vamos jogar e você " + jogador1.getNome()
                                 + " começa!!!");
 
                         while (tabuleiro.venceu == false && tabuleiro.velha == false) {//ira rodar até for vericado pelo metodo verificar
@@ -86,8 +85,8 @@ import java.util.Scanner;
 
                     } else {
 // Aqui o jogador 2 começa pois o numero sorteado nao estava dentro do escopo selecionado pelo jogador1(de 0 a 49)
-                        System.out.println("O número foi sorteado e o vencedor é o ..." + jogador2.nome + "!!!\n"
-                                + "Viu, não foi tão ruim ser o segundo né?\n" + "Bom, vamos jogar e você " + jogador2.nome
+                        System.out.println("O número foi sorteado e o vencedor é o ..." + jogador2.getNome() + "!!!\n"
+                                + "Viu, não foi tão ruim ser o segundo né?\n" + "Bom, vamos jogar e você " + jogador2.getNome()
                                 + " começa!!!");
 
                         while (tabuleiro.venceu == false && tabuleiro.velha == false) {//ira rodar até for vericado pelo metodo verificar
@@ -106,16 +105,16 @@ import java.util.Scanner;
 
                 } else if (jogador1.sorte == 2) {// Aqui o jogador 1 escolhe o escopo de 50 a 100
                     System.out.println("opçao 2");
-                    System.out.println(jogador2.nome + ", você pode ter achado injusto ele começar escolhendo,"
+                    System.out.println(jogador2.getNome() + ", você pode ter achado injusto ele começar escolhendo,"
                             + "mas foi mal, player1 tem que ter um pouco de vantagem, nao faço magica :)\n"
                             + "Sua opção é a de número 2, boa sorte! ");
 
                     if (numeroSorteado >= 50) {//Aqui o jogador 1  tambem começa, pois o numero sorteado estava entre 50 a 100, e esse foi o
 // escopo escolhido pelo jogador 1
 
-                        System.out.println("O número foi sorteado e o vencedor é o ... " + jogador1.nome + "!!!\n"
+                        System.out.println("O número foi sorteado e o vencedor é o ... " + jogador1.getNome() + "!!!\n"
                                 + "É as vezes ser o privelegiado ajuda mesmo... Mas sem choro!!!\n"
-                                + "A dificuldade é a diversão dos fortes\n" + "Bom, vamos jogar e você " + jogador1.nome
+                                + "A dificuldade é a diversão dos fortes\n" + "Bom, vamos jogar e você " + jogador1.getNome()
                                 + " começa!!!");
 
                         while (tabuleiro.venceu == false && tabuleiro.velha == false) {//ira rodar até for vericado pelo metodo verificar
@@ -132,8 +131,8 @@ import java.util.Scanner;
 
                     } else {
 // Aqui o jogador 2 tambem começa pois o numero sorteado nao estava dentro do escopo selecionado pelo jogador1(de 50 a 100)
-                        System.out.println("O número foi sorteado e o vencedor é o ..." + jogador2.nome + "!!!\n"
-                                + "Viu, não foi tão ruim ser o segundo né?\n" + "Bom, vamos jogar e você " + jogador2.nome
+                        System.out.println("O número foi sorteado e o vencedor é o ..." + jogador2.getNome() + "!!!\n"
+                                + "Viu, não foi tão ruim ser o segundo né?\n" + "Bom, vamos jogar e você " + jogador2.getNome()
                                 + " começa!!!");
 
                         while (tabuleiro.venceu == false && tabuleiro.velha == false) {//ira rodar até for vericado pelo metodo verificar
