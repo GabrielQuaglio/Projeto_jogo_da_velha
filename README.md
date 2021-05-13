@@ -39,7 +39,7 @@ Confira algumas imagens do programa em execução no terminal clicando [aqui](ht
 
 - Navegue até o diretorio principal do projeto
 
-​       `$ cd Diretorio_A_Sua_Escolha/ProjetoJogoDaVelha/src/Jogo`.
+​       `$ cd /ProjetoJogoDaVelha/src/Jogo`.
 
 
 - Dentro do pacote Jogo compile as classes do projeto
