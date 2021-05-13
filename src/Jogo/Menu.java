@@ -19,6 +19,7 @@ public class Menu {
     }
 
     public void setOpçao(int opçao) {
+
         if (opçao > 0 && opçao < 4) {
             this.opçao = opçao;
         } else {

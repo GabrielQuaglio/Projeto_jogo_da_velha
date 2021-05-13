@@ -71,11 +71,11 @@ import java.util.Scanner;
                                 + "A dificuldade é a diversão dos fortes\n" + "Bom, vamos jogar e você " + jogador1.getNome()
                                 + " começa!!!");
 
-                        while (tabuleiro.venceu == false && tabuleiro.velha == false) {//ira rodar até for vericado pelo metodo verificar
+                        while (tabuleiro.getVenceu() == false && tabuleiro.getVelha() == false) {//ira rodar até for vericado pelo metodo verificar
                             tabuleiro.jogar(jogador1);                         //se alguem ganhou ou se deu velha
                             tabuleiro.mostrar();
                             tabuleiro.verificarVitoria(jogador1);
-                            if (tabuleiro.venceu == false && tabuleiro.velha == false) {//foi feito isso para verificar a jogada antes do proximo jogador jogar
+                            if (tabuleiro.getVenceu() == false && tabuleiro.getVelha() == false) {//foi feito isso para verificar a jogada antes do proximo jogador jogar
                                 tabuleiro.jogar(jogador2);
                                 tabuleiro.mostrar();
                                 tabuleiro.verificarVitoria(jogador2);
@@ -89,11 +89,11 @@ import java.util.Scanner;
                                 + "Viu, não foi tão ruim ser o segundo né?\n" + "Bom, vamos jogar e você " + jogador2.getNome()
                                 + " começa!!!");
 
-                        while (tabuleiro.venceu == false && tabuleiro.velha == false) {//ira rodar até for vericado pelo metodo verificar
+                        while (tabuleiro.getVenceu() == false && tabuleiro.getVelha() == false) {//ira rodar até for vericado pelo metodo verificar
                             tabuleiro.jogar(jogador2); //se alguem ganhou ou se deu velha
                             tabuleiro.mostrar();
                             tabuleiro.verificarVitoria(jogador2);
-                            if (tabuleiro.venceu == false && tabuleiro.velha == false) {//foi feito isso para verificar a jogada antes do proximo jogador jogar
+                            if (tabuleiro.getVenceu() == false && tabuleiro.getVelha() == false) {//foi feito isso para verificar a jogada antes do proximo jogador jogar
                                 tabuleiro.jogar(jogador1);
                                 tabuleiro.mostrar();
                                 tabuleiro.verificarVitoria(jogador1);
@@ -103,7 +103,7 @@ import java.util.Scanner;
 
                     }
 
-                } else if (jogador1.sorte == 2) {// Aqui o jogador 1 escolhe o escopo de 50 a 100
+                } else if (jogador1.getSorte()== 2) {// Aqui o jogador 1 escolhe o escopo de 50 a 100
                     System.out.println("opçao 2");
                     System.out.println(jogador2.getNome() + ", você pode ter achado injusto ele começar escolhendo,"
                             + "mas foi mal, player1 tem que ter um pouco de vantagem, nao faço magica :)\n"
@@ -117,11 +117,11 @@ import java.util.Scanner;
                                 + "A dificuldade é a diversão dos fortes\n" + "Bom, vamos jogar e você " + jogador1.getNome()
                                 + " começa!!!");
 
-                        while (tabuleiro.venceu == false && tabuleiro.velha == false) {//ira rodar até for vericado pelo metodo verificar
+                        while (tabuleiro.getVenceu()== false && tabuleiro.getVelha() == false) {//ira rodar até for vericado pelo metodo verificar
                             tabuleiro.jogar(jogador1);//se alguem ganhou ou se deu velha
                             tabuleiro.mostrar();
                             tabuleiro.verificarVitoria(jogador1);
-                            if (tabuleiro.venceu == false && tabuleiro.velha == false) {//foi feito isso para verificar a jogada antes do proximo jogador jogar
+                            if (tabuleiro.getVenceu()== false && tabuleiro.getVelha() == false) {//foi feito isso para verificar a jogada antes do proximo jogador jogar
                                 tabuleiro.jogar(jogador2);
                                 tabuleiro.mostrar();
                                 tabuleiro.verificarVitoria(jogador2);
@@ -135,11 +135,11 @@ import java.util.Scanner;
                                 + "Viu, não foi tão ruim ser o segundo né?\n" + "Bom, vamos jogar e você " + jogador2.getNome()
                                 + " começa!!!");
 
-                        while (tabuleiro.venceu == false && tabuleiro.velha == false) {//ira rodar até for vericado pelo metodo verificar
+                        while (tabuleiro.getVenceu() == false && tabuleiro.getVelha() == false) {//ira rodar até for vericado pelo metodo verificar
                             tabuleiro.jogar(jogador2);//se alguem ganhou ou se deu velha
                             tabuleiro.mostrar();
                             tabuleiro.verificarVitoria(jogador2);
-                            if (tabuleiro.venceu == false && tabuleiro.velha == false) {//foi feito isso para verificar a jogada antes do proximo jogador jogar
+                            if (tabuleiro.getVenceu()== false && tabuleiro.getVelha() == false) {//foi feito isso para verificar a jogada antes do proximo jogador jogar
                                 tabuleiro.jogar(jogador1);
                                 tabuleiro.mostrar();
                                 tabuleiro.verificarVitoria(jogador1);

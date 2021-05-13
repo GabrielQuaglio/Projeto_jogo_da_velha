@@ -7,16 +7,16 @@ import java.io.InputStreamReader;
 
     public class Tabuleiro {
 
-        int jogada2;
-        int jogada3;
-        int jogada4;
-        int jogada5;
-        int jogada6;
-        int jogada7;
-        int jogada8;
-        int jogada9;
-        boolean venceu = false;
-        boolean velha = false;
+       private int jogada2;
+       private int jogada3;
+       private int jogada4;
+       private int jogada5;
+       private int jogada6;
+       private int jogada7;
+       private int jogada8;
+       private int jogada9;
+       private boolean venceu = false;
+       private boolean velha = false;
 
         BufferedReader enter = new BufferedReader(new InputStreamReader(System.in));
 
@@ -222,6 +222,13 @@ import java.io.InputStreamReader;
                 }
 
             }
+        }
+        public boolean getVenceu(){
+            return venceu;
+        }
+
+        public boolean getVelha(){
+            return velha;
         }
     }
 

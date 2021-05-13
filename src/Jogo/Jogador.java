@@ -6,7 +6,7 @@ package Jogo;
 
        private String nome;
         private  char simbolo;
-         int sorte;
+        private int sorte;
         boolean venceu = false;
         private boolean foi;
 
@@ -23,6 +23,7 @@ package Jogo;
 
         public void setSimbolo(char simbolo) {//metodo para atribuir o simbolo o qual o jogador utilizara para jogar
                     this.simbolo = simbolo;
+
                 if (getSimbolo() == 'x' || getSimbolo() == 'o' ) {
                     this.simbolo = simbolo;
                     setFoi(true);
@@ -48,7 +49,7 @@ package Jogo;
             return foi;
         }
 
-        public void setFoi(boolean foi) {
+        private void setFoi(boolean foi) {
             this.foi = foi;
         }
     }
