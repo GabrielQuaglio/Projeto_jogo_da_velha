@@ -41,7 +41,6 @@ Confira algumas imagens do programa em execução no terminal clicando [aqui](ht
 
 ​       `$ cd /ProjetoJogoDaVelha/src/Jogo`.
 
-
 - Dentro do pacote Jogo compile as classes do projeto
 
   !!! Importante que seja na mesma ordem abaixo
