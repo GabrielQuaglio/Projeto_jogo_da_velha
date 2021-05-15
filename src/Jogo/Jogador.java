@@ -7,7 +7,7 @@ package Jogo;
        private String nome;
         private  char simbolo;
         private int sorte;
-        boolean venceu = false;
+       private boolean venceu;
         private boolean foi;
 
 

@@ -11,7 +11,7 @@ import java.io.InputStreamReader;
 
 public class Menu {
 
-        String resposta = "nao";
+       private String resposta = "nao";
         private int opçao;
 
     public int getOpçao() {
